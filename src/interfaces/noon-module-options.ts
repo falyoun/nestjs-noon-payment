@@ -3,7 +3,6 @@ import { ModuleMetadata, Provider, Type } from '@nestjs/common';
 export type NoonModuleOptions = {
   noonApiKey: string;
   paymentMode: 'Test' | 'Live';
-  baseUrl?: string;
 };
 
 export interface NoonModuleOptionsFactory {

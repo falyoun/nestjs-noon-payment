@@ -20,9 +20,7 @@ export class NoonPaymentModule {
       providers: [
         {
           provide: NOON_AXIOS_INSTANCE_TOKEN,
-          useValue: axios.create({
-            baseURL: options.baseUrl,
-          }),
+          useValue: axios.create(),
         },
         {
           provide: NOON_MODULE_OPTIONS_TOKEN,
@@ -41,9 +39,7 @@ export class NoonPaymentModule {
         ...this.createAsyncProviders(options),
         {
           provide: NOON_AXIOS_INSTANCE_TOKEN,
-          useFactory: (config: NoonModuleOptions) => axios.create({
-            baseURL: config.baseUrl,
-          }),
+          useFactory: (_: NoonModuleOptions) => axios.create(),
           inject: [NOON_MODULE_OPTIONS_TOKEN],
         },
         ...(options.extraProviders || []),
