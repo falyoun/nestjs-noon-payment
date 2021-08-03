@@ -6,6 +6,7 @@
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
+  "repository": "https://github.com/lynx-falyoun/nestjs-noon-payment",
   "files": [
     "/lib"
   ],
@@ -38,7 +39,8 @@
     "mapped-types": "0.0.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "tscpaths": "0.0.9"
   },
   "devDependencies": {
     "@nestjs/cli": "^8.0.0",
