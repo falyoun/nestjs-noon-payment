@@ -1,6 +1,6 @@
 {
   "name": "@scandinavia/noon-payment",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Integration with noon payment gateway",
   "author": "Abdulrahman Falyoun",
   "main": "./lib/cjs/index.js",
