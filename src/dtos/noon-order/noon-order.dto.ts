@@ -3,15 +3,19 @@ import { NoonOrderItemDto } from '@app/dtos';
 
 export class NoonOrderDto {
   @IsString()
-  status: 'AUTHORIZED' | 'CAPTURED' | '3DS_ENROLL_CHECKED';
+  @IsOptional()
+  status?: 'AUTHORIZED' | 'CAPTURED' | '3DS_ENROLL_CHECKED';
 
   @Allow()
-  creationTime: string;
+  @IsOptional()
+  creationTime?: string;
 
   @IsPositive()
-  id: number;
+  @IsOptional()
+  id?: number;
 
   @IsString()
+  @IsNotEmpty()
   name: string;
   @IsNotEmpty()
   amount: number;
@@ -20,7 +24,7 @@ export class NoonOrderDto {
   currency: string;
 
   @IsNotEmpty()
-  channel: 'Web' | 'Mobile';
+  channel: 'Web' | 'web' | 'Mobile' | 'mobile';
 
   @IsNotEmpty()
   category: string;
@@ -42,17 +46,23 @@ export class NoonOrderDto {
 
 
   @IsOptional()
-  nvp?: Map<any, any>;
+  nvp?: any;
 
   @IsOptional()
   items?: NoonOrderItemDto[];
 
 
-  totalAuthorizedAmount: number;
-  totalCapturedAmount: number;
-  totalRefundedAmount: number;
-  totalRemainingAmount: number;
-  totalReversedAmount: number;
-  totalSalesAmount: number;
+  @IsOptional()
+  totalAuthorizedAmount?: number;
+  @IsOptional()
+  totalCapturedAmount?: number;
+  @IsOptional()
+  totalRefundedAmount?: number;
+  @IsOptional()
+  totalRemainingAmount?: number;
+  @IsOptional()
+  totalReversedAmount?: number;
+  @IsOptional()
+  totalSalesAmount?: number;
 
 }

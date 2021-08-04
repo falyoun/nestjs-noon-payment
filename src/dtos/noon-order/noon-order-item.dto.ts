@@ -19,7 +19,7 @@ export class NoonOrderItemDto {
 
 
   @IsOptional()
-  nvp?: Map<any, any>;
+  nvp?: any;
 
 
 }
